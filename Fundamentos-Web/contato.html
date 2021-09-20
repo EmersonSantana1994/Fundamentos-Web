@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Contato</title>
 </head>
 <body>
@@ -15,33 +16,52 @@
          <a href="contato.html">Contato</a>
      </li> 
      </ul>
-    <h1>Entre em contato comigo</h1>
-    <form>
-        <br>
-        <br>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome">
-        <br>
-        <br>    
-        <label for="email">E-mail:</label> <br>
-        <input type="email" id="email">
-        <br>
-        <br>
-        <label for="assunto">Assunto:</label> <br>
-        <textarea name="assunto" id="assunto" cols="30" rows = "5"></textarea>
-
-        <br>
-        <br>
-        <button>Enviar</button>
-    </form>
     
-    <h2>Endereço:</h2>
+     <h1 class="center"> Entre em contato comigo  </h1>
+        <div class="container">
 
-    <p>Av. Paulista, 100</p>
-    <p>São Paulo SP</p>
+            <div class="mp-10">
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.367270835173!2d-46.664613685433345!3d-23.555249384685904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce582d9f4b5c59%3A0x6724a490f79b5e30!2sPaulista!5e0!3m2!1spt-BR!2sbr!4v1631814556926!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        
+                <form>
+                    <br>
+                    <br>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" onkeyup = 'validaNome()'>
+                    <div id = 'txtNome'></div>
+                    <br>
+                    <br>    
+                    <label for="email">E-mail:</label> 
+                    <input type="email" id="email" onkeyup= 'validaEmail()'>
+                    <div id = 'txtEmail'></div>
+                    <br>
+                    <br>
+                    <label for="assunto">Assunto:</label> 
+                    <textarea name="assunto" id="assunto" cols="30" rows = "5" onkeyup="validaAssunto()"></textarea>
+                    <div id = 'txtAssunto'></div>
 
-    </form>
+                    <br>
+                    <br>
+                    <button onclick="enviar()">Enviar</button>
+                </form>
+
+            </div>
+
+            <div class="ml-50">
+
+                
+                <p>Av. Paulista, 100</p>
+                <p>São Paulo SP</p>
+            
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.367270835173!2d-46.664613685433345!3d-23.555249384685904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce582d9f4b5c59%3A0x6724a490f79b5e30!2sPaulista!5e0!3m2!1spt-BR!2sbr!4v1631814556926!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" onmousemove="mapaZoom()" onmouseout="mapaNormal()"  id = 'mapa'></iframe>
+            
+
+            </div>
+   
+        </div>
+
+<script src="assets/js/script.js"></script>
+
+
 </body>
 </html>
